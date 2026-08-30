@@ -1,6 +1,6 @@
 # Joaquim
 
- Olá, meu nome é Joaquim,s ou estudante e estou aprendendo sobre tecnologia e programação.
+ Olá, meu nome é Joaquim, sou estudante e estou aprendendo sobre tecnologia e programação.
 
  Atualmente estou estudando e desenvolvendo conhecimentos em programação e desenvolvimento web.
 
