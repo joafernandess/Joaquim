@@ -4,35 +4,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Joaquim Bueno Fernandes | Portfólio</title>
-<meta name="description" content="Portfólio de Joaquim Bueno Fernandes: sites, landing pages e automação.">
+<meta name="description" content="Portfólio de Joaquim Bueno Fernandes: sites, landing pages, automação e agentes de IA.">
+<meta property="og:title" content="Joaquim Bueno Fernandes | Portfólio">
+<meta property="og:description" content="Sites completos: desenvolvimento, hospedagem, domínio e design.">
 <style>
   :root {
-    --bg: #f7f8fa;
+    --bg: #f5f7fb;
     --card: #ffffff;
-    --text: #1d2330;
-    --muted: #5b6475;
-    --accent: #1f4e79;
-    --border: #e2e6ee;
+    --text: #141a26;
+    --muted: #5b6577;
+    --accent: #3b82f6;
+    --accent-2: #8b5cf6;
+    --border: #e3e8f0;
+    --shadow: 0 10px 30px rgba(20, 26, 38, .08);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0f1218;
-      --card: #171c26;
-      --text: #e8ecf3;
-      --muted: #9aa4b6;
-      --accent: #7fb2e5;
-      --border: #263040;
+      --bg: #0b0e14;
+      --card: #141a24;
+      --text: #e9edf5;
+      --muted: #98a2b5;
+      --accent: #7aa8ff;
+      --accent-2: #b59cff;
+      --border: #222b3a;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0f1218;
-    --card: #171c26;
-    --text: #e8ecf3;
-    --muted: #9aa4b6;
-    --accent: #7fb2e5;
-    --border: #263040;
+    --bg: #0b0e14;
+    --card: #141a24;
+    --text: #e9edf5;
+    --muted: #98a2b5;
+    --accent: #7aa8ff;
+    --accent-2: #b59cff;
+    --border: #222b3a;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .35);
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     background: var(--bg);
@@ -40,88 +49,150 @@
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     line-height: 1.6;
   }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
-  header { padding: 64px 0 32px; }
-  h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 6px; }
-  .role { color: var(--accent); font-size: 18px; margin: 0 0 16px; }
-  .links a {
-    display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px;
-    border: 1px solid var(--border); border-radius: 999px;
-    color: var(--text); text-decoration: none; font-size: 14px; background: var(--card);
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    color: #fff;
+    padding: 72px 0 84px;
+    position: relative;
+    overflow: hidden;
   }
-  .links a:hover { border-color: var(--accent); color: var(--accent); }
-  section { padding: 28px 0; }
-  h2 {
-    font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
-    color: var(--accent); margin: 0 0 16px;
+  .hero::after {
+    content: ""; position: absolute; right: -120px; top: -120px;
+    width: 380px; height: 380px; border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
   }
+  .avatar {
+    width: 72px; height: 72px; border-radius: 18px;
+    background: rgba(255, 255, 255, .18);
+    display: grid; place-items: center;
+    font-size: 26px; font-weight: 700; letter-spacing: 1px;
+    margin-bottom: 20px; backdrop-filter: blur(4px);
+  }
+  .hero h1 { font-size: clamp(30px, 5.5vw, 46px); line-height: 1.15; margin: 0 0 10px; }
+  .hero .role { font-size: clamp(16px, 2.4vw, 19px); opacity: .92; margin: 0 0 26px; max-width: 640px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; position: relative; z-index: 1; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 15px;
+    text-decoration: none; background: #fff; color: #1d2b4a;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, .18); }
+  .btn.ghost { background: rgba(255, 255, 255, .14); color: #fff; border: 1px solid rgba(255, 255, 255, .35); }
+
+  /* Sections */
+  section { padding: 56px 0 8px; }
+  .eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 8px;
+  }
+  h2 { font-size: clamp(22px, 3.5vw, 28px); margin: 0 0 24px; }
   p { margin: 0 0 12px; }
-  .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
-  @media (min-width: 680px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .about p { max-width: 720px; color: var(--muted); font-size: 17px; }
+
+  /* Projects */
+  .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
   .card {
-    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-    padding: 20px; display: flex; flex-direction: column;
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 24px; display: flex; flex-direction: column; box-shadow: var(--shadow);
+    transition: transform .2s ease, border-color .2s ease;
   }
-  .card h3 { margin: 0 0 8px; font-size: 17px; }
+  .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .num {
+    font-size: 13px; font-weight: 700; color: var(--accent-2);
+    margin-bottom: 6px; letter-spacing: 1px;
+  }
+  .card h3 { margin: 0 0 10px; font-size: 19px; line-height: 1.3; }
   .card p { color: var(--muted); font-size: 15px; flex-grow: 1; }
-  .card a.visit {
-    color: var(--accent); font-weight: 600; text-decoration: none; font-size: 14px; margin-top: 8px;
+  .card .visit {
+    display: inline-flex; align-items: center; gap: 4px; margin-top: 14px;
+    color: var(--accent); font-weight: 600; text-decoration: none; font-size: 15px;
   }
-  .card a.visit:hover { text-decoration: underline; }
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .card .visit:hover { text-decoration: underline; }
+
+  /* Skills */
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; }
   .tags span {
-    background: var(--card); border: 1px solid var(--border); border-radius: 6px;
-    padding: 4px 10px; font-size: 14px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 999px;
+    padding: 6px 14px; font-size: 14px; font-weight: 500;
+    box-shadow: var(--shadow);
   }
-  .about p { max-width: 720px; }
+
+  /* Languages */
+  .langs { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .lang {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 16px 18px;
+  }
+  .lang strong { display: block; font-size: 16px; }
+  .lang span { color: var(--muted); font-size: 14px; }
+
   footer {
-    border-top: 1px solid var(--border); padding: 24px 0 40px;
-    color: var(--muted); font-size: 14px;
+    margin-top: 64px; border-top: 1px solid var(--border);
+    padding: 28px 0 40px; color: var(--muted); font-size: 14px;
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
   }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header>
+<header class="hero">
+  <div class="wrap">
+    <div class="avatar" aria-hidden="true">JB</div>
     <h1>Joaquim Bueno Fernandes</h1>
-    <p class="role">Desenvolvedor web em formação | Sites, landing pages e automação</p>
-    <div class="links">
-      <a href="mailto:joaquimbuenofernandes1@gmail.com">E-mail</a>
-      <a href="https://github.com/joafernandess" target="_blank" rel="noopener">GitHub</a>
-      <a href="curriculo/Joaquim_Bueno_Fernandes_Curriculo.pdf">Currículo (PDF)</a>
+    <p class="role">Desenvolvedor web em formação. Crio sites completos, do código à publicação, com hospedagem, domínio e design.</p>
+    <div class="btns">
+      <a class="btn" href="mailto:joaquimbuenofernandes1@gmail.com">✉ Entrar em contato</a>
+      <a class="btn ghost" href="curriculo/Joaquim_Bueno_Fernandes_Curriculo.pdf">Currículo (PDF)</a>
+      <a class="btn ghost" href="https://github.com/joafernandess" target="_blank" rel="noopener">GitHub</a>
     </div>
-  </header>
+  </div>
+</header>
+
+<main class="wrap">
 
   <section class="about">
-    <h2>Sobre</h2>
-    <p>Sou estudante do Técnico em Desenvolvimento de Sistemas na ETEC Jorge Street. Crio sites completos: desenvolvimento, hospedagem, domínio e design. Também trabalho com landing pages, agentes de IA e bots.</p>
-    <p>Procuro projetos freelancer e oportunidades de estágio.</p>
+    <p class="eyebrow">Sobre</p>
+    <h2>Quem eu sou</h2>
+    <p>Sou estudante do Técnico em Desenvolvimento de Sistemas na ETEC Jorge Street. Monto sites, landing pages, agentes de IA e bots, e cuido de toda a entrega: desenvolvimento, hospedagem, domínio e design.</p>
+    <p>Estou em busca de projetos freelancer e de oportunidades de estágio.</p>
   </section>
 
   <section>
+    <p class="eyebrow">Trabalhos</p>
     <h2>Projetos</h2>
     <div class="grid">
 
       <article class="card">
+        <span class="num">01</span>
         <h3>RB Revestimentos &amp; Multicortes</h3>
         <p>Site institucional para fábrica de fachadas em ACM, letra caixa, neon e corte laser, com galeria de obras e orçamento direto pelo WhatsApp.</p>
         <a class="visit" href="https://previadoprojeto.netlify.app/" target="_blank" rel="noopener">Ver site →</a>
       </article>
 
       <article class="card">
+        <span class="num">02</span>
         <h3>Nelson Moreira: Comunicação e Oratória</h3>
         <p>Site de mentoria com serviços, método de trabalho, links para aulas no YouTube, depoimentos e formulário de contato.</p>
         <a class="visit" href="http://onelsonmoreira.com.br/" target="_blank" rel="noopener">Ver site →</a>
       </article>
 
       <article class="card">
+        <span class="num">03</span>
         <h3>Priscila Aroli: Arquitetura de Interiores</h3>
         <p>Site de portfólio com galeria de projetos, depoimentos de clientes, áreas de atendimento e formulário de contato.</p>
         <a class="visit" href="https://priaroliarquitetura.com/" target="_blank" rel="noopener">Ver site →</a>
       </article>
 
       <article class="card">
+        <span class="num">04</span>
         <h3>Franco Market</h3>
         <p>Site institucional para minimercado autônomo 24h em condomínios, com seções para síndicos e moradores, perguntas frequentes e solicitação de proposta.</p>
         <a class="visit" href="https://francomarket.com.br/" target="_blank" rel="noopener">Ver site →</a>
@@ -131,6 +202,7 @@
   </section>
 
   <section>
+    <p class="eyebrow">Stack</p>
     <h2>Habilidades</h2>
     <div class="tags">
       <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Next</span>
@@ -140,14 +212,22 @@
   </section>
 
   <section>
-    <h2>Idiomas</h2>
-    <p>Português (nativo) · Inglês · Alemão e russo (em aprendizado)</p>
+    <p class="eyebrow">Idiomas</p>
+    <h2>Comunicação</h2>
+    <div class="langs">
+      <div class="lang"><strong>Português</strong><span>Nativo</span></div>
+      <div class="lang"><strong>Inglês</strong><span>Idioma estrangeiro</span></div>
+      <div class="lang"><strong>Alemão</strong><span>Em aprendizado</span></div>
+      <div class="lang"><strong>Russo</strong><span>Em aprendizado</span></div>
+    </div>
   </section>
 
-  <footer>
-    © Joaquim Bueno Fernandes · <a href="mailto:joaquimbuenofernandes1@gmail.com" style="color:inherit">joaquimbuenofernandes1@gmail.com</a>
-  </footer>
+</main>
 
-</div>
+<footer class="wrap">
+  <span>© Joaquim Bueno Fernandes</span>
+  <a href="mailto:joaquimbuenofernandes1@gmail.com">joaquimbuenofernandes1@gmail.com</a>
+</footer>
+
 </body>
 </html>
