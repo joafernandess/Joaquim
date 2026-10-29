@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joaquim Bueno Fernandes | Portfólio</title>
+<meta name="description" content="Portfólio de Joaquim Bueno Fernandes: sites, landing pages e automação.">
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --text: #1d2330;
+    --muted: #5b6475;
+    --accent: #1f4e79;
+    --border: #e2e6ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1218;
+      --card: #171c26;
+      --text: #e8ecf3;
+      --muted: #9aa4b6;
+      --accent: #7fb2e5;
+      --border: #263040;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1218;
+    --card: #171c26;
+    --text: #e8ecf3;
+    --muted: #9aa4b6;
+    --accent: #7fb2e5;
+    --border: #263040;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 64px 0 32px; }
+  h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 6px; }
+  .role { color: var(--accent); font-size: 18px; margin: 0 0 16px; }
+  .links a {
+    display: inline-block; margin: 4px 8px 4px 0; padding: 8px 14px;
+    border: 1px solid var(--border); border-radius: 999px;
+    color: var(--text); text-decoration: none; font-size: 14px; background: var(--card);
+  }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+  section { padding: 28px 0; }
+  h2 {
+    font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 16px;
+  }
+  p { margin: 0 0 12px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width: 680px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px; display: flex; flex-direction: column;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 17px; }
+  .card p { color: var(--muted); font-size: 15px; flex-grow: 1; }
+  .card a.visit {
+    color: var(--accent); font-weight: 600; text-decoration: none; font-size: 14px; margin-top: 8px;
+  }
+  .card a.visit:hover { text-decoration: underline; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tags span {
+    background: var(--card); border: 1px solid var(--border); border-radius: 6px;
+    padding: 4px 10px; font-size: 14px;
+  }
+  .about p { max-width: 720px; }
+  footer {
+    border-top: 1px solid var(--border); padding: 24px 0 40px;
+    color: var(--muted); font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Joaquim Bueno Fernandes</h1>
+    <p class="role">Desenvolvedor web em formação | Sites, landing pages e automação</p>
+    <div class="links">
+      <a href="mailto:joaquimbuenofernandes1@gmail.com">E-mail</a>
+      <a href="https://github.com/joafernandess" target="_blank" rel="noopener">GitHub</a>
+      <a href="curriculo/Joaquim_Bueno_Fernandes_Curriculo.pdf">Currículo (PDF)</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>Sobre</h2>
+    <p>Sou estudante do Técnico em Desenvolvimento de Sistemas na ETEC Jorge Street. Crio sites completos: desenvolvimento, hospedagem, domínio e design. Também trabalho com landing pages, agentes de IA e bots.</p>
+    <p>Procuro projetos freelancer e oportunidades de estágio.</p>
+  </section>
+
+  <section>
+    <h2>Projetos</h2>
+    <div class="grid">
+
+      <article class="card">
+        <h3>RB Revestimentos &amp; Multicortes</h3>
+        <p>Site institucional para fábrica de fachadas em ACM, letra caixa, neon e corte laser, com galeria de obras e orçamento direto pelo WhatsApp.</p>
+        <a class="visit" href="https://previadoprojeto.netlify.app/" target="_blank" rel="noopener">Ver site →</a>
+      </article>
+
+      <article class="card">
+        <h3>Nelson Moreira: Comunicação e Oratória</h3>
+        <p>Site de mentoria com serviços, método de trabalho, links para aulas no YouTube, depoimentos e formulário de contato.</p>
+        <a class="visit" href="http://onelsonmoreira.com.br/" target="_blank" rel="noopener">Ver site →</a>
+      </article>
+
+      <article class="card">
+        <h3>Priscila Aroli: Arquitetura de Interiores</h3>
+        <p>Site de portfólio com galeria de projetos, depoimentos de clientes, áreas de atendimento e formulário de contato.</p>
+        <a class="visit" href="https://priaroliarquitetura.com/" target="_blank" rel="noopener">Ver site →</a>
+      </article>
+
+      <article class="card">
+        <h3>Franco Market</h3>
+        <p>Site institucional para minimercado autônomo 24h em condomínios, com seções para síndicos e moradores, perguntas frequentes e solicitação de proposta.</p>
+        <a class="visit" href="https://francomarket.com.br/" target="_blank" rel="noopener">Ver site →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Habilidades</h2>
+    <div class="tags">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Next</span>
+      <span>Python</span><span>Lua</span><span>Landing pages</span><span>Agentes de IA</span>
+      <span>Bots</span><span>Host e domínio</span><span>Design de sites</span><span>C# (em aprendizado)</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Idiomas</h2>
+    <p>Português (nativo) · Inglês · Alemão e russo (em aprendizado)</p>
+  </section>
+
+  <footer>
+    © Joaquim Bueno Fernandes · <a href="mailto:joaquimbuenofernandes1@gmail.com" style="color:inherit">joaquimbuenofernandes1@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
